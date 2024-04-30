@@ -58,7 +58,7 @@ def detect_yellow_object(frame):
 def control_pan_tilt(centroid_x, centroid_y, frame_width, frame_height):
     # Define servo control parameters
     pan_angle = map_to_range(centroid_x, 0, frame_width, 0, 180)
-    tilt_angle = map_to_range(centroid_y, 0, frame_height, 180, 0)
+    tilt_angle = map_to_range(centroid_y, 0, frame_height, 167, 50)  # Adjusted range for tilt servo
 
     # Print debug information
     print(f"Centroid: ({centroid_x}, {centroid_y})")
@@ -75,7 +75,7 @@ def map_to_range(value, from_low, from_high, to_low, to_high):
 # Main function
 def main():
     # Open video capture device
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
 
     while True:
         # Read a frame from the video capture device

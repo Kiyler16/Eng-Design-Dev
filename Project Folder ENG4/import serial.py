@@ -12,7 +12,7 @@ ser = serial.Serial(serial_port, baud_rate)
 time.sleep(2)
 
 # Send command to Arduino
-command = b'off\n'
+command = b'on\n'
 ser.write(command)
 
 # Close the serial port

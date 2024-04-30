@@ -1,4 +1,6 @@
 #include <Servo.h>
+#include <Arduino.h>
+
 
 #define PAN_PIN 9
 #define TILT_PIN 10
